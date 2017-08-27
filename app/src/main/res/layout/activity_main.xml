@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cyanprinterink.myapplication.MainActivity">
+
+    <EditText
+        android:id="@+id/totalCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Total"
+        android:inputType="numberDecimal"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="16dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="37dp" />
+
+    <EditText
+        android:id="@+id/taxPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Tax (6% = 0.06)"
+        android:inputType="numberDecimal"
+        app:layout_constraintLeft_toLeftOf="@+id/totalCost"
+        app:layout_constraintTop_toBottomOf="@+id/totalCost"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <CheckBox
+            android:id="@+id/roundTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Round Up to Next Dollar"
+            tools:layout_constraintTop_creator="1"
+            android:layout_marginTop="17dp"
+            app:layout_constraintTop_toBottomOf="@+id/taxPercent"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/taxPercent" />
+
+    <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="214dp"
+            android:text="Calculate"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_constraintTop_creator="1"
+            android:onClick="displayTip" />
+
+    <TextView
+            android:text="TextView"
+            android:layout_width="160sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tip"
+            android:visibility="invisible"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="70dp"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            app:layout_constraintHorizontal_bias="0.501" />
+</android.support.constraint.ConstraintLayout>
